@@ -1,1 +1,124 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小练习3</title>
+	<style type="text/css">
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	/*container宽度设置为只显示一张图片*/
+	#container {
+		width: 400px;
+		height: 600px;
+		margin: 0 auto;
+		border: 1px solid #000;
+		position: relative;
+		overflow: hidden;
+		box-shadow: 5px 5px 5px;
+	}
+	/*main的宽度为8张图片的总宽，让图片并排, left的值写在css里js取不到，为什么？？？*/
+	#main {
+		width: 3200px;
+		height: 600px;
+		position: absolute;
+	}
+	#main img {
+		width: 400px;
+		height: 600px;
+		float: left;
+	}
+	#btns {
+		position: absolute;
+		left: 111px;
+		top: 565px;
+	}
+	#btns span {
+		cursor: pointer;
+		width: 8px;
+		height: 8px;
+		border-radius: 6px;
+		border: 2px solid #888;
+		background-color: #ccc;
+		margin-left: 15px;
+		float: left;
+	}
+	#btns .on {
+		background-color: #f00;
+	}
+	#arrow {
+		position: absolute;
+		left: 20px;
+		top: 280px;
+	}
+	#arrow span {
+		cursor: pointer;
+		width: 40px;
+		height: 40px;
+		background-color: rgba(200, 200, 200, 0.3);
+		float: left;
+		margin-right: 280px;
+		font-size: 30px;
+		line-height: 40px;
+		text-align: center;
+		display: none;
+	}
+	#container:hover #arrow span {
+		display: block;
+	}
+	#arrow .right {
+		margin-right: 0px;
+	}
+	#autoleft {
+		position: absolute;
+		left: 300px;
+		top: 310px;
+	}
+	#autoright {
+		position: absolute;
+		right: 300px;
+		top: 310px;
+	}
+	#autoleft,
+	#autoright {
+		cursor: pointer;
+		background-color: #f05;
+		border: 1px solid #f05;
+		border-radius: 5px;
+		padding: 5px;
+	}
+	</style>
+</head>
+<body>
+	<h3>轮播图</h3>
+	<div id="container">
+		<div id="main" style="left: -400px">
+			<img src="img/p4.jpg">
+			<img src="img/p9.jpg">
+			<img src="img/p5.jpg">
+			<img src="img/p6.jpg">
+			<img src="img/p7.jpg">
+			<img src="img/p8.jpg">
+			<img src="img/p4.jpg">
+			<img src="img/p9.jpg">	
+		</div>
+		<div id="btns">
+			<span name="1" class="on"></span>
+			<span name="2" ></span>
+			<span name="3" ></span>
+			<span name="4" ></span>
+			<span name="5" ></span>
+			<span name="6" ></span>
+		</div>
+		<div id="arrow">
+			<span class="left" id="left"><b>&lt</b></span>
+			<span class="right" id="right"><b>&gt</b></span>
+		</div>
+		
+	</div>
+	<div id="autoleft">左自动播放</div>
+	<div id="autoright">右自动播放</div>
+	<script type="text/javascript" src="js/task0002_3.js"></script>
+</body>
+</html>
