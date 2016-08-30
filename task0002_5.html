@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小练习5</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		#main {
+			width: 800px;
+			height: 650px;
+			margin: 0 auto;
+			background-color: #ccc;
+		}
+		#container1,
+		#container2 {
+			width: 250px;
+			height: 500px;
+			background-color: #fff;
+			border: 1px solid #000;
+			position: relative;
+			display: inline-block;
+			margin: 70px;
+		}
+		
+		#container1 div,
+		#container2 div {
+			width: 248px;
+			height: 50px;
+			background-color: #f00;
+			border:1px solid #000;
+			position: absolute;
 
+		}
+	</style>
+</head>
+<body>
+	<h1>界面拖拽交互</h1>
+	<div id="main">
+		<div id="container1">
+			<div class="box" style="left: 0">1</div>
+			<div class="box" style="left: 0">2</div>
+			<div class="box" style="left: 0">3</div>
+			<div class="box" style="left: 0">4</div>
+			<div class="box" style="left: 0">5</div>
+		</div>
+		<div id="container2">
+			<div class="box" style="left: 0">6</div>
+			<div class="box" style="left: 0">7</div>
+			<div class="box" style="left: 0">8</div>
+			<div class="box" style="left: 0">9</div>
+			<div class="box" style="left: 0">0</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/task0002_5.js"></script>
+</body>
+</html>
